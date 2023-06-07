@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import requests
 
 url = 'https://zenodo.org/record/7879430/files/arguments-test.tsv?download=1'
