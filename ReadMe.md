@@ -25,3 +25,6 @@ The annotated corpus in tab-separated value format. Contains the following files
     labels-<split>.tsv: Each row corresponds to one argument
         Argument ID: The unique identifier for the argument
         Other: Each other column corresponds to one value category, with a 1 meaning that the argument resorts to the value category and a 0 that not
+
+### Run
+I wrote a python script named run.py which allows any user to run each part of this project seperately.
