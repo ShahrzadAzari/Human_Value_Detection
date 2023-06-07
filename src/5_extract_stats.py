@@ -80,6 +80,10 @@ for i, label in enumerate(labels):
         most_frequent_uncommon_words_df.loc[label, f'word{j}'] = sorted_word_dict[j-1][0]
         sorted_words.append(sorted_word_dict[j-1])
 
+common_unique_word_count_df.to_csv(f"../stats/common_unique_word_count.tsv", sep="\t", header=True, index=True)
+uncommon_unique_word_count_df.to_csv(f"../stats/uncommon_unique_word_count.tsv", sep="\t", header=True, index=True)
+most_frequent_uncommon_words_df.to_csv(f"../stats/most_frequent_uncommon_words.tsv", sep="\t", header=True, index=True)
+
 # compute words histogram
 sorted_words = sorted(sorted_words, key=lambda x:x[1], reverse=True)
 names = []
