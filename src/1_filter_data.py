@@ -34,10 +34,13 @@ in_favor_of_achievement_df = training_df[(
 in_favor_of_achievement_df.to_csv("../data/raw/label_seperated/achievement_P/achievement_P.tsv",
     sep="\t", header=True, index=False)
 
+
 # against_achievement_df -> achievement_N
 against_achievement_df = training_df[(
     (training_df['Achievement'] == 1) & (training_df['Stance'] == "against"))]
 against_achievement_df.to_csv("../data/raw/label_seperated/achievement_N/achievement_N.tsv",
+    sep="\t", header=True, index=False)
+against_achievement_df.to_csv("../data/clean/achievement_N/achievement_N.tsv",
     sep="\t", header=True, index=False)
 
 # in_favor_of_power_dominance_df -> power_dominance_P
@@ -45,11 +48,15 @@ in_favor_of_power_dominance_df = training_df[(
     (training_df['Power: dominance'] == 1) & (training_df['Stance'] == "in favor of"))]
 in_favor_of_power_dominance_df.to_csv("../data/raw/label_seperated/power_dominance_P/power_dominance_P.tsv",
     sep="\t", header=True, index=False)
+in_favor_of_power_dominance_df.to_csv("../data/clean/power_dominance_P/power_dominance_P.tsv",
+    sep="\t", header=True, index=False)
 
 # against_power_dominance_df -> power_dominance_N
 against_power_dominance_df = training_df[(
     (training_df['Power: dominance'] == 1) & (training_df['Stance'] == "against"))]
 against_power_dominance_df.to_csv("../data/raw/label_seperated/power_dominance_N/power_dominance_N.tsv",
+    sep="\t", header=True, index=False)
+against_power_dominance_df.to_csv("../data/clean/power_dominance_N/power_dominance_N.tsv",
     sep="\t", header=True, index=False)
 
 # in_favor_of_power_resources_df -> power_resources_P
@@ -57,9 +64,13 @@ in_favor_of_power_resources_df = training_df[(
     (training_df['Power: resources'] == 1) & (training_df['Stance'] == "in favor of"))]
 in_favor_of_power_resources_df.to_csv("../data/raw/label_seperated/power_resources_P/power_resources_P.tsv",
     sep="\t", header=True, index=False)
+in_favor_of_power_resources_df.to_csv("../data/clean/power_resources_P/power_resources_P.tsv",
+    sep="\t", header=True, index=False)
 
 # against_power_resources_df -> power_resources_N
 against_power_resources_df = training_df[(
     (training_df['Power: resources'] == 1) & (training_df['Stance'] == "against"))]
 against_power_resources_df.to_csv("../data/raw/label_seperated/power_resources_N/power_resources_N.tsv",
+    sep="\t", header=True, index=False)
+against_power_resources_df.to_csv("../data/clean/power_resources_N/power_resources_N.tsv",
     sep="\t", header=True, index=False)
