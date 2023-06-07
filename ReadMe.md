@@ -1,8 +1,12 @@
-# Dataset for Touché / SemEval 2023 Task 4; ValueEval: Identification of Human Values behind Arguments.
+## SemEval 2023 Task 4
+
+### ValueEval
+Identification of Human Values behind Arguments.  
 The dataset has total of 9324 annotated arguments.
 
-# Value Taxonomy
+### Value Taxonomy
 The value-categories.json describes the 20 value categories of this task through examples. Format:
+```
 {
   "<value category>": {
     "<level 1 value>": [
@@ -11,9 +15,11 @@ The value-categories.json describes the 20 value categories of this task through
     ], ...
   }, ...
 }
+```
 
-# Argument Corpus
+### Argument Corpus
 The annotated corpus in tab-separated value format. Contains the following files for the different dataset splits:
+
     arguments-<split>.tsv: Each row corresponds to one argument
         Argument ID: The unique identifier for the argument
         Conclusion: Conclusion text of the argument
@@ -23,7 +29,7 @@ The annotated corpus in tab-separated value format. Contains the following files
         Argument ID: The unique identifier for the argument
         Other: Each other column corresponds to one value category, with a 1 meaning that the argument resorts to the value category and a 0 that not
 
-# Argument Meta-information
+### Argument Meta-information
     meta-arguments-a.tsv: Each row corresponds to one argument (IDs starting with A) from the IBM-ArgQ-Rank-30kArgs
         Argument ID: The unique identifier for the argument
         WA: the quality label according to the weighted-average scoring function
