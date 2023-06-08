@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 
 labels = os.listdir("../data/clean")
 
-row_count_df = pd.DataFrame(columns=['row_count'], index=labels)
-sentence_count_df = pd.DataFrame(columns=['sentence_count'], index=labels)
-word_count_df = pd.DataFrame(columns=['word_count'], index=labels)
-unique_word_count_df = pd.DataFrame(columns=['unique_word_count'], index=labels)
-common_unique_word_count_df = pd.DataFrame(columns=['common_unique_word_count'], index=labels)
-uncommon_unique_word_count_df = pd.DataFrame(columns=['uncommon_unique_word_count'], index=labels)
+row_count_df = pd.DataFrame(columns=['row count'], index=labels)
+sentence_count_df = pd.DataFrame(columns=['sentence count'], index=labels)
+word_count_df = pd.DataFrame(columns=['word count'], index=labels)
+unique_word_count_df = pd.DataFrame(columns=['unique word count'], index=labels)
+common_unique_word_count_df = pd.DataFrame(columns=['common unique word count'], index=labels)
+uncommon_unique_word_count_df = pd.DataFrame(columns=['uncommon unique word count'], index=labels)
 most_frequent_uncommon_words_df = pd.DataFrame(columns=[f'word {i}' for i in range(1,11)], index=labels)
 
 common_words = set()
@@ -22,7 +22,7 @@ for label in labels:
     word_broken_df = pd.read_csv(f"../data/wordbroken/{label}/{label}.tsv", sep='\t')
     
     # compute row count
-    row_count_df.loc[label, "row_count"] = len(clean_df.index)
+    row_count_df.loc[label, "row count"] = len(clean_df.index)
 
     sentence_count = 0
     word_count = 0
@@ -48,9 +48,9 @@ for label in labels:
     else:
         common_words = common_words.intersection(set(word_dict))
 
-    sentence_count_df.loc[label, "sentence_count"] = sentence_count
-    word_count_df.loc[label, "word_count"] = word_count
-    unique_word_count_df.loc[label, "unique_word_count_df"] = len(word_dict)
+    sentence_count_df.loc[label, "sentence count"] = sentence_count
+    word_count_df.loc[label, "word count"] = word_count
+    unique_word_count_df.loc[label, "unique word count"] = len(word_dict)
 
 row_count_df.to_csv(f"../stats/row_count.csv", sep="\t", header=True, index=True)
 sentence_count_df.to_csv(f"../stats/sentence_count.csv", sep="\t", header=True, index=True)
@@ -71,8 +71,8 @@ for i, label in enumerate(labels):
         else:
             uncommon_unique_word_count += 1
 
-    common_unique_word_count_df.loc[label, "common_unique_word_count"] = common_unique_word_count
-    uncommon_unique_word_count_df.loc[label, "uncommon_unique_word_count"] = uncommon_unique_word_count
+    common_unique_word_count_df.loc[label, "common unique word count"] = common_unique_word_count
+    uncommon_unique_word_count_df.loc[label, "uncommon unique word count"] = uncommon_unique_word_count
 
     # compute 10 Most Frequent Uncommon Words
     sorted_word_dict = sorted(word_dict.items(), key=lambda x:x[1], reverse=True)
