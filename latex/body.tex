@@ -3,7 +3,7 @@
 This is a classification task based on \href{https://valueeval.webis.de/}{SemEval 2023 Task 4}. Its objective is to identify human values behind arguments.  
 To be more clear, given a text and some value categories, here we want to identify which category it falls in and also is it against or in favor of that category.  
 You can access the project codes from \href{https://github.com/ShahrzadAzari/Human_Value_Detection}{here},
-and also all the data has uploaded to hugging face accessable via this \href{https://huggingface.co/datasets/Sheza/Human-Values}{link}
+and also all the data has uploaded to hugging face accessible via this \href{https://huggingface.co/datasets/Sheza/Human-Values}{link}
 
 \section{Dataset}
 Initially there was a dataset of 5393 annotated arguments. There was 20 values which i chose only 3 of them:
@@ -36,65 +36,67 @@ For each of the remaining values, there is two labels: 'against' and 'in favor o
 For cleaning data, I removed all punctuation marks except dot. The reason for that is it makes the sentence and word tokenizing easier.
 
 \subsection{Data Breaking}
-After cleaning the data, I broke data by its sentence. You can find the label seperated files inside data/sentencebroken directory. I also
-broke data by its words which you can find the label seperated files inside data/wordbroken directory.
+After cleaning the data, I broke data by its sentence. You can find the label separated files inside data/sentencebroken directory. I also
+broke data by its words which you can find the label separated files inside data/wordbroken directory.
 
 \section{Statistics}
 These are some basics statistics about the dataset.
 
 \subsection{Row Count}
 Number of rows for each label.
-\begin{adjustbox}{max width=\textwidth}
-\csvautotabular{../stats/row_count.tsv}
-\end{adjustbox}
+
+\begin{align*}
+	\csvautotabular{../stats/row_count.csv}
+\end{align*}
 
 \subsection{Sentence Count}
 Number of sentence for each label.
-\begin{adjustbox}{max width=\textwidth}
-    \csvautotabular{../stats/sentence_count.tsv}
-\end{adjustbox}
+\begin{align*}
+	\csvautotabular{../stats/sentence_count.csv}
+\end{align*}
+
 
 \subsection{Word Count}
 Number of words for each label.
-\begin{adjustbox}{max width=\textwidth}
-    \csvautotabular{../stats/word_count.tsv}
-\end{adjustbox}
+\begin{align*}
+    \csvautotabular{../stats/word_count.csv}
+\end{align*}
 
 \subsection{Unique Word Count}
 Number of unique words for each label.
-\begin{adjustbox}{max width=\textwidth}
-    \csvautotabular{../stats/unique_word_count.tsv}
-\end{adjustbox}
+\begin{align*}
+    \csvautotabular{../stats/unique_word_count.csv}
+\end{align*}
 
 \subsection{Common Unique Word Count}
 Number of common unique words for each label.  
 Extra explanation: I computed the common words between all labels, then count the number of unique words for each label which are present in common words.
-\begin{adjustbox}{max width=\textwidth}
-    \csvautotabular{../stats/common_unique_word_count.tsv}
-\end{adjustbox}
+\begin{align*}
+    \csvautotabular{../stats/common_unique_word_count.csv}
+\end{align*}
 
 \subsection{Uncommon Unique Word Count}
 Number of uncommon unique words for each label.  
 Extra explanation: I computed the common words between all labels, then count the number of unique words for each label which are not present in common words.
-\begin{adjustbox}{max width=\textwidth}
-    \csvautotabular{../stats/uncommon_unique_word_count.tsv}
-\end{adjustbox}
+\begin{align*}
+    \csvautotabular{../stats/uncommon_unique_word_count.csv}
+\end{align*}
 
 \subsection{10 Most Frequent Uncommon Words}
 10 most frequent uncommon words for each label.  
 Extra explanation: I computed the common words between all labels, then count the number of unique words occurrences for each label which are not present in common words, and sort them by number of occurrences to get the 10 most frequent uncommon words.
-\begin{adjustbox}{max width=\textwidth}
-    \csvautotabular{../stats/most_frequent_uncommon_words.tsv}
-\end{adjustbox}
+\begin{align*}
+    \csvautotabular{../stats/most_frequent_uncommon_words.csv}
+\end{align*}
 
 \subsection{Words Histogram}
 In this words histogram, you see 30 of the most frequent words in all labels.
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=\linewidth]{../stats/words_histogram.png}
-        \caption{most Frequent Words}
+        \caption{Most Frequent Words}
     \end{center}
 \end{figure}
 
 \section{Run Script}
-I wrote a python script which allows any user to run each part of this project seperately.
+I wrote a python script which allows any user to run each part of this project separately.
