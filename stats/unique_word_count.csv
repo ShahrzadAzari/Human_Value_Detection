@@ -1,7 +1,7 @@
 	unique word count
-power_dominance_N	1642
-power_resources_P	1730
-power_resources_N	1535
-achievement_P	3465
-power_dominance_P	2066
-achievement_N	2782
+Against Achievement	2782
+In favor of Achievement	3465
+Against Power: dominance	1642
+In favor of Power: dominance	2066
+Against Power: resources	1535
+In favor of Power: resources	1730

@@ -1,7 +1,7 @@
 	sentence count
-power_dominance_N	426
-power_resources_P	433
-power_resources_N	412
-achievement_P	1222
-power_dominance_P	497
-achievement_N	970
+Against Achievement	970
+In favor of Achievement	1222
+Against Power: dominance	426
+In favor of Power: dominance	497
+Against Power: resources	412
+In favor of Power: resources	433

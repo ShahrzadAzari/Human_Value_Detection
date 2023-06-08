@@ -1,7 +1,7 @@
 	row count
-power_dominance_N	310
-power_resources_P	306
-power_resources_N	319
-achievement_P	783
-power_dominance_P	300
-achievement_N	729
+Against Achievement	729
+In favor of Achievement	783
+Against Power: dominance	310
+In favor of Power: dominance	300
+Against Power: resources	319
+In favor of Power: resources	306

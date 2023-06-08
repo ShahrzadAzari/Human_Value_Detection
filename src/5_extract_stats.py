@@ -1,10 +1,24 @@
 #!/usr/bin/python
 
 import pandas as pd
-import os
 import matplotlib.pyplot as plt
 
-labels = os.listdir("../data/clean")
+labels = [
+    'Against Achievement',
+    'In favor of Achievement',
+    'Against Power: dominance',
+    'In favor of Power: dominance',
+    'Against Power: resources',
+    'In favor of Power: resources'
+]
+file_names = [
+    'achievement_N',
+    'achievement_P',
+    'power_dominance_N',
+    'power_dominance_P',
+    'power_resources_N',
+    'power_resources_P'
+]
 
 row_count_df = pd.DataFrame(columns=['row count'], index=labels)
 sentence_count_df = pd.DataFrame(columns=['sentence count'], index=labels)
@@ -16,10 +30,10 @@ most_frequent_uncommon_words_df = pd.DataFrame(columns=[f'word {i}' for i in ran
 
 common_words = set()
 word_dicts = []
-for label in labels:
-    clean_df = pd.read_csv(f"../data/clean/{label}/{label}.tsv", sep='\t')
-    sentence_broken_df = pd.read_csv(f"../data/sentencebroken/{label}/{label}.tsv", sep='\t')
-    word_broken_df = pd.read_csv(f"../data/wordbroken/{label}/{label}.tsv", sep='\t')
+for index, label in enumerate(labels):
+    clean_df = pd.read_csv(f"../data/clean/{file_names[index]}/{file_names[index]}.tsv", sep='\t')
+    sentence_broken_df = pd.read_csv(f"../data/sentencebroken/{file_names[index]}/{file_names[index]}.tsv", sep='\t')
+    word_broken_df = pd.read_csv(f"../data/wordbroken/{file_names[index]}/{file_names[index]}.tsv", sep='\t')
     
     # compute row count
     row_count_df.loc[label, "row count"] = len(clean_df.index)
@@ -77,7 +91,7 @@ for i, label in enumerate(labels):
     # compute 10 Most Frequent Uncommon Words
     sorted_word_dict = sorted(word_dict.items(), key=lambda x:x[1], reverse=True)
     for j in range(1, 11):
-        most_frequent_uncommon_words_df.loc[label, f'word{j}'] = sorted_word_dict[j-1][0]
+        most_frequent_uncommon_words_df.loc[label, f'word {j}'] = sorted_word_dict[j-1][0]
         sorted_words.append(sorted_word_dict[j-1])
 
 common_unique_word_count_df.to_csv(f"../stats/common_unique_word_count.csv", sep="\t", header=True, index=True)
