@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {2}Dataset}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Data Collection}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Data Structure}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Data Filtering}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Data Filtering}{4}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Data Cleaning}{4}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Data Breaking}{4}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Statistics}{4}{section.3}%
@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {3.3}Word Count}{5}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Unique Word Count}{6}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Common Unique Word Count}{6}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Uncommon Unique Word Count}{6}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.6}Uncommon Unique Word Count}{7}{subsection.3.6}%
 \contentsline {subsection}{\numberline {3.7}10 Most Frequent Uncommon Words}{7}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}Words Histogram}{7}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.8}Words Histogram}{8}{subsection.3.8}%
 \contentsline {section}{\numberline {4}Run Script}{8}{section.4}%
